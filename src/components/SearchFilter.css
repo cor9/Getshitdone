@@ -1,0 +1,85 @@
+.search-filter {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filter-group {
+  flex: 1;
+  min-width: 150px;
+}
+
+.search-input,
+.filter-select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus,
+.filter-select:focus {
+  outline: none;
+  border-color: #17a2b8;
+  box-shadow: 0 0 0 3px rgba(23, 162, 184, 0.1);
+}
+
+.clear-filters-btn {
+  padding: 10px 16px;
+  background: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.clear-filters-btn:hover {
+  background: #5a6268;
+  transform: translateY(-1px);
+}
+
+/* Dark Mode Styles */
+.search-filter.dark-mode .search-input,
+.search-filter.dark-mode .filter-select {
+  background: #3a3a3a;
+  border-color: #4a4a4a;
+  color: #e0e0e0;
+}
+
+.search-filter.dark-mode .search-input:focus,
+.search-filter.dark-mode .filter-select:focus {
+  border-color: #17a2b8;
+  background: #3a3a3a;
+}
+
+.search-filter.dark-mode .clear-filters-btn {
+  background: #6c757d;
+}
+
+.search-filter.dark-mode .clear-filters-btn:hover {
+  background: #5a6268;
+}
+
+@media (max-width: 768px) {
+  .search-filter {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .filter-group {
+    width: 100%;
+  }
+  
+  .clear-filters-btn {
+    width: 100%;
+  }
+}
+

@@ -1,0 +1,255 @@
+.todo-item {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.todo-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.todo-item.completed {
+  opacity: 0.7;
+  background: #f8f9fa;
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+.todo-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.todo-main {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.todo-checkbox {
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+  cursor: pointer;
+  accent-color: #667eea;
+}
+
+.todo-text {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.todo-meta {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.todo-category {
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.todo-priority {
+  padding: 6px 12px;
+  background: #f8f9fa;
+  border-radius: 20px;
+  color: #495057;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit-btn {
+  background: #17a2b8;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #138496;
+  transform: translateY(-1px);
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #c82333;
+  transform: translateY(-1px);
+}
+
+/* Editing state */
+.todo-item.editing {
+  background: #fff3cd;
+  border-left-color: #ffc107;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.edit-input,
+.edit-category {
+  padding: 10px 14px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+}
+
+.edit-input:focus,
+.edit-category:focus {
+  outline: none;
+  border-color: #17a2b8;
+  box-shadow: 0 0 0 3px rgba(23, 162, 184, 0.1);
+}
+
+.edit-priority {
+  padding: 10px 14px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+  cursor: pointer;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.save-btn,
+.cancel-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+}
+
+.save-btn {
+  background: #28a745;
+  color: white;
+}
+
+.save-btn:hover {
+  background: #218838;
+  transform: translateY(-1px);
+}
+
+.cancel-btn {
+  background: #6c757d;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background: #5a6268;
+  transform: translateY(-1px);
+}
+
+/* Dark Mode Styles */
+.todo-item.dark-mode {
+  background: #2a2a2a;
+  color: #e0e0e0;
+}
+
+.todo-item.dark-mode.completed {
+  background: #1a1a1a;
+  opacity: 0.7;
+}
+
+.todo-item.dark-mode.completed .todo-text {
+  color: #888;
+}
+
+.todo-item.dark-mode .todo-text {
+  color: #e0e0e0;
+}
+
+.todo-item.dark-mode .todo-priority {
+  background: #3a3a3a;
+  color: #b0b0b0;
+}
+
+.todo-item.dark-mode.editing {
+  background: #3a2a00;
+  border-left-color: #ffc107;
+}
+
+.todo-item.dark-mode .edit-input,
+.todo-item.dark-mode .edit-category {
+  background: #3a3a3a;
+  border-color: #4a4a4a;
+  color: #e0e0e0;
+}
+
+.todo-item.dark-mode .edit-input:focus,
+.todo-item.dark-mode .edit-category:focus {
+  border-color: #17a2b8;
+  background: #3a3a3a;
+}
+
+.todo-item.dark-mode .edit-priority {
+  background: #3a3a3a;
+  border-color: #4a4a4a;
+  color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+  .todo-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .todo-meta {
+    flex-wrap: wrap;
+  }
+  
+  .todo-actions {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .edit-btn,
+  .delete-btn {
+    flex: 1;
+  }
+}
+

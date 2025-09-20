@@ -1,0 +1,158 @@
+.todo-form {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.task-input,
+.category-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.task-input:focus,
+.category-input:focus {
+  outline: none;
+  border-color: #17a2b8;
+  box-shadow: 0 0 0 3px rgba(23, 162, 184, 0.1);
+}
+
+.category-select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-select:focus {
+  outline: none;
+  border-color: #17a2b8;
+  box-shadow: 0 0 0 3px rgba(23, 162, 184, 0.1);
+}
+
+.custom-category-group {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.custom-category-group .category-input {
+  flex: 1;
+}
+
+.cancel-custom-btn {
+  padding: 12px 16px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.cancel-custom-btn:hover {
+  background: #c82333;
+  transform: translateY(-1px);
+}
+
+.priority-select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.priority-select:focus {
+  outline: none;
+  border-color: #17a2b8;
+  box-shadow: 0 0 0 3px rgba(23, 162, 184, 0.1);
+}
+
+.add-button {
+  width: 100%;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #8b4513 0%, #17a2b8 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.add-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(139, 69, 19, 0.3);
+}
+
+.add-button:active {
+  transform: translateY(0);
+}
+
+/* Dark Mode Styles */
+.todo-form.dark-mode {
+  background: #2a2a2a;
+}
+
+.todo-form.dark-mode .task-input,
+.todo-form.dark-mode .category-input {
+  background: #3a3a3a;
+  border-color: #4a4a4a;
+  color: #e0e0e0;
+}
+
+.todo-form.dark-mode .task-input:focus,
+.todo-form.dark-mode .category-input:focus {
+  border-color: #17a2b8;
+  background: #3a3a3a;
+}
+
+.todo-form.dark-mode .category-select,
+.todo-form.dark-mode .priority-select {
+  background: #3a3a3a;
+  border-color: #4a4a4a;
+  color: #e0e0e0;
+}
+
+.todo-form.dark-mode .category-select:focus,
+.todo-form.dark-mode .priority-select:focus {
+  border-color: #17a2b8;
+  background: #3a3a3a;
+}
+
+.todo-form.dark-mode .cancel-custom-btn {
+  background: #dc3545;
+}
+
+.todo-form.dark-mode .cancel-custom-btn:hover {
+  background: #c82333;
+}
+
+@media (max-width: 768px) {
+  .todo-form {
+    padding: 20px;
+  }
+}
+
