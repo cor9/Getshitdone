@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Getshitdone/static/css/main.3890deb3.css",
+    "main.js": "/Getshitdone/static/js/main.8fbf95d1.js",
+    "index.html": "/Getshitdone/index.html",
+    "main.3890deb3.css.map": "/Getshitdone/static/css/main.3890deb3.css.map",
+    "main.8fbf95d1.js.map": "/Getshitdone/static/js/main.8fbf95d1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3890deb3.css",
+    "static/js/main.8fbf95d1.js"
+  ]
+}
